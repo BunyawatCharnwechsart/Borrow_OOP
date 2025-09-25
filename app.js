@@ -27,7 +27,7 @@ class Book extends LibraryItem {
 
     // Polymorphism (override)
     getInfo() {
-        return `Book : ${this.title}, Author : ${this.author}`;
+        return `Book : ${this.title}, ผู้แต่ง : ${this.author}`;
     }
 }
 
@@ -39,7 +39,7 @@ class DVD extends LibraryItem {
 
     // Polymorphism (override)
     getInfo() {
-        return `DVD : ${this.title}, Duration : ${this.duration} mins`;
+        return `DVD : ${this.title}, ระยะเวลา : ${this.duration} นาที`;
     }
 }
 
@@ -54,10 +54,10 @@ class User {
 
         const borrowList = document.querySelector(".borrow-list");
         const li = document.createElement("li");
-        li.textContent = `${this.name} borrowed: ${item.title} `;
+        li.textContent = `${this.name} ได้ยืม : ${item.title} `;
 
         const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Delete";
+        deleteBtn.textContent = "ลบ";
         deleteBtn.addEventListener("click", ()=>{
             li.remove();
             this.borrowedItem = this.borrowedItem.filter(i => i.id !== item.id);
@@ -74,7 +74,7 @@ class User {
         }
 
         let items = this.borrowedItem.map(i => i.title).join(" | ");
-        alert(`${this.name} confirmed borrow: ${items}`);
+        alert(`${this.name} ยืนยันการยืม : ${items}`);
     }
 
     // Polymorphism
@@ -116,7 +116,7 @@ items.forEach(item => {
     li.textContent = item.getInfo();
     
     const borrowBtn = document.createElement("button");
-    borrowBtn.textContent = "Borrow";
+    borrowBtn.textContent = "ยืม";
     borrowBtn.addEventListener("click", ()=>{
         student.borrow(item);
     });
