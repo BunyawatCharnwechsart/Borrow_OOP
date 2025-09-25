@@ -1,0 +1,84 @@
+body {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.head {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 70vh;
+}
+
+.item {
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    background: #9eec87;
+}
+
+.borrow {
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #df3bd1;
+    color: white;
+}
+
+.list-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px;
+    margin-top: 40px;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.borrow-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px;
+    margin-top: 40px;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.sectionBtn {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.confirmBtn {
+    background: #0703fd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    font-size: large;
+}
+
+button {
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 10px;
+    background: #000;
+    color: white;
+}
