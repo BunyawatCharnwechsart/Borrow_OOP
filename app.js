@@ -1,3 +1,4 @@
+// Abstraction Class
 class LibraryItem {
     #title; // private
     #id;    // private
@@ -76,6 +77,7 @@ class DVD extends LibraryItem {
     }
 }
 
+//Class User
 class User {
     #name;
     #borrowedItem;
