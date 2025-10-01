@@ -92,7 +92,7 @@ class User {
     }
 
     getBorrowedItems(){
-        return [...this.#borrowedItem]; // copy ออกไป ไม่ให้แก้ตรงๆ
+        return [this.#borrowedItem];
     }
 
     borrow(item){
