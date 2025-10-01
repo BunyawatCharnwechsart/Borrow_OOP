@@ -139,3 +139,37 @@ class Teacher extends User {
         return "Teacher";
     }
 }
+
+// create items
+const book1 = new Book("OOP Book", 1, "Mon lnwza");
+const book2 = new Book("JS Book", 2, "Ball lnwza");
+const dvd1 = new DVD("สอน OOP", 3, 220);
+const dvd2 = new DVD("สอน JS", 3, 112);
+
+// Array items
+const items = [book1, book2, dvd1, dvd2];
+
+const student = new Student("Mon");
+const teacher = new Teacher("Ball");
+
+const list = document.querySelector(".list-items");
+
+items.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item.getInfo();
+    
+    const borrowBtn = document.createElement("button");
+    borrowBtn.textContent = "ยืม";
+    borrowBtn.addEventListener("click", ()=>{
+        student.borrow(item);
+    });
+
+    
+    li.appendChild(borrowBtn);
+    list.appendChild(li);
+});
+
+const confirmBtn = document.querySelector("#confirmBtn");
+confirmBtn.addEventListener("click", ()=>{
+    student.confirmBorrow();
+});
